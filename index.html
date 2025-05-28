@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can't Control This</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+    .half {
+      flex: 1;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="half" id="left"></div>
+    <div class="half" id="right"></div>
+  </div>
+
+  <script>
+    function getRandomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
+
+    left.style.backgroundColor = getRandomColor();
+    right.style.backgroundColor = getRandomColor();
+
+    left.addEventListener('click', () => {
+      left.style.backgroundColor = getRandomColor();
+    });
+
+    right.addEventListener('click', () => {
+      right.style.backgroundColor = getRandomColor();
+    });
+  </script>
+</body>
+</html>
