@@ -1,2 +1,2 @@
 # OCD-Can-t-Control-This.
-You can't control the next colors. App created to give a little help creating a non control system, helping you to no try to predict and controll, all your next choices.
+App created to give a little help in creating a non-control system, helping you to not try to predict and control all your next choices.
